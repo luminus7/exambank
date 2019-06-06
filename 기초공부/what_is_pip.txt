@@ -1,0 +1,24 @@
+
+-----
+# What is pip?
+
+pip is package management system for Python package software
+
+package software: I think its like bundle of library.. not accurate explain/ If confused find this at Stackoverflow :)
+-> https://stackoverflow.com/questions/16997950/whats-the-difference-between-module-package-and-library-in-haskell
+-----
+
+-> want more Python package? go visit Python Package Index (PyPI) & github
+
+-----
+# Easy Installation/Removal
+
+Installation
+$ pip install some-package-name
+
+Removal
+$ pip uninstall some-package-nal
+-----
+
+
+

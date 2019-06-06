@@ -1,0 +1,181 @@
+-----
+#초기 다운로드 시도
+
+(base) PS C:\Users\isang\Desktop\pyhwp-master\pyhwp-master> py2 setup.py
+
+---------------------------------------------------------------------------
+This script requires setuptools version 0.6c11 to run (even to display
+help).  I will attempt to download it for you (from
+http://pypi.python.org/packages/2.7/s/setuptools/), but
+you may need to enable firewall access for this script first.
+I will start the download in 15 seconds.
+
+(Note: if this machine does not have network access, please obtain the file
+
+   http://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.egg
+
+and place it in this directory before rerunning this script.)
+---------------------------------------------------------------------------
+Downloading http://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.egg
+Traceback (most recent call last):
+  File "setup.py", line 205, in <module>
+    main()
+  File "setup.py", line 36, in wrapped
+    return f(*args, **kwargs)
+  File "setup.py", line 197, in main
+    setuptools = import_setuptools()
+  File "setup.py", line 36, in wrapped
+    return f(*args, **kwargs)
+  File "setup.py", line 52, in import_setuptools
+    ez_setup.use_setuptools()
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\ez_setup.py", line 103, in use_setuptools
+    return do_download()
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\ez_setup.py", line 97, in do_download
+    egg = download_setuptools(version, download_base, to_dir, download_delay)
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\ez_setup.py", line 158, in download_setuptools
+    src = urllib2.urlopen(url)
+  File "C:\Python27\Lib\urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "C:\Python27\Lib\urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "C:\Python27\Lib\urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "C:\Python27\Lib\urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+urllib2.HTTPError: HTTP Error 403: SSL is required
+
+
+
+#파일 다운 후
+(base) PS C:\Users\isang\Desktop\pyhwp-master\pyhwp-master> py2 setup.py
+Couldn't find index page for 'babel' (maybe misspelled?)
+No local packages or download links found for babel
+Traceback (most recent call last):
+  File "setup.py", line 205, in <module>
+    main()
+  File "setup.py", line 36, in wrapped
+    return f(*args, **kwargs)
+  File "setup.py", line 201, in main
+    setuptools.setup(**setup_info)
+  File "C:\Python27\Lib\distutils\core.py", line 111, in setup
+    _setup_distribution = dist = klass(attrs)
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\setuptools\dist.py", line 260, in __init__
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\setuptools\dist.py", line 284, in fetch_build_eggs
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\pkg_resources.py", line 563, in resolve
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\pkg_resources.py", line 799, in best_match
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\pkg_resources.py", line 811, in obtain
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\setuptools\dist.py", line 327, in fetch_build_egg
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\setuptools\command\easy_install.py", line 434, in easy_install
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\setuptools\package_index.py", line 475, in fetch_distribution
+AttributeError: 'NoneType' object has no attribute 'clone'
+
+
+
+
+# 방화벽 모두 끈 후
+(base) PS C:\Users\isang\Desktop\pyhwp-master\pyhwp-master> py2 setup.py
+Couldn't find index page for 'babel' (maybe misspelled?)
+No local packages or download links found for babel
+Traceback (most recent call last):
+  File "setup.py", line 205, in <module>
+    main()
+  File "setup.py", line 36, in wrapped
+    return f(*args, **kwargs)
+  File "setup.py", line 201, in main
+    setuptools.setup(**setup_info)
+  File "C:\Python27\Lib\distutils\core.py", line 111, in setup
+    _setup_distribution = dist = klass(attrs)
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\setuptools\dist.py", line 260, in __init__
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\setuptools\dist.py", line 284, in fetch_build_eggs
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\pkg_resources.py", line 563, in resolve
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\pkg_resources.py", line 799, in best_match
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\pkg_resources.py", line 811, in obtain
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\setuptools\dist.py", line 327, in fetch_build_egg
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\setuptools\command\easy_install.py", line 434, in easy_install
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\setuptools\package_index.py", line 475, in fetch_distribution
+AttributeError: 'NoneType' object has no attribute 'clone'
+(base) PS C:\Users\isang\Desktop\pyhwp-master\pyhwp-master> py2 setup.py
+Couldn't find index page for 'babel' (maybe misspelled?)
+No local packages or download links found for babel
+Traceback (most recent call last):
+  File "setup.py", line 205, in <module>
+    main()
+  File "setup.py", line 36, in wrapped
+    return f(*args, **kwargs)
+  File "setup.py", line 201, in main
+    setuptools.setup(**setup_info)
+  File "C:\Python27\Lib\distutils\core.py", line 111, in setup
+    _setup_distribution = dist = klass(attrs)
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\setuptools\dist.py", line 260, in __init__
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\setuptools\dist.py", line 284, in fetch_build_eggs
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\pkg_resources.py", line 563, in resolve
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\pkg_resources.py", line 799, in best_match
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\pkg_resources.py", line 811, in obtain
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\setuptools\dist.py", line 327, in fetch_build_egg
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\setuptools\command\easy_install.py", line 434, in easy_install
+  File "C:\Users\isang\Desktop\pyhwp-master\pyhwp-master\setuptools-0.6c11-py2.7.egg\setuptools\package_index.py", line 475, in fetch_distribution
+AttributeError: 'NoneType' object has no attribute 'clone'
+-----
+
+
+#일련의 과정을 거친 후
+C:\WINDOWS\system32>cd C:\Users\isang\Desktop\pyhwp-master\pyhwp-master
+
+C:\Users\isang\Desktop\pyhwp-master\pyhwp-master>python ez_setup.py
+'python'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+C:\Users\isang\Desktop\pyhwp-master\pyhwp-master>py2 ez_setup.py
+Processing setuptools-0.6c11-py2.7.egg
+Copying setuptools-0.6c11-py2.7.egg to c:\python27\lib\site-packages
+Adding setuptools 0.6c11 to easy-install.pth file
+Installing easy_install-script.py script to C:\Python27\Scripts
+Installing easy_install.exe script to C:\Python27\Scripts
+Installing easy_install.exe.manifest script to C:\Python27\Scripts
+Installing easy_install-2.7-script.py script to C:\Python27\Scripts
+Installing easy_install-2.7.exe script to C:\Python27\Scripts
+Installing easy_install-2.7.exe.manifest script to C:\Python27\Scripts
+
+Installed c:\python27\lib\site-packages\setuptools-0.6c11-py2.7.egg
+Processing dependencies for setuptools==0.6c11
+Finished processing dependencies for setuptools==0.6c11
+
+C:\Users\isang\Desktop\pyhwp-master\pyhwp-master>
+
+#아마도 python2가 깔려있지 않아서 그랬던게 아닐까?
+-----
+#ex_setup.py 설치가 완료되고 C;\Python\Scripts 폴더가 생성된게 보인다.
+
+-> 이 다음부터는 구글에 널려있는 Python2에서 easy install 을 이용한 pip설치방법을 따라함
+-----
+
+#pip설치가 안됨
+C:\Python27\Scripts>easy_install pip
+Searching for pip
+Reading http://pypi.python.org/simple/pip/
+Couldn't find index page for 'pip' (maybe misspelled?)
+Scanning index of all packages (this may take a while)
+Reading http://pypi.python.org/simple/
+No local packages or download links found for pip
+Best match: None
+Traceback (most recent call last):
+  File "C:\Python27\Scripts\easy_install-script.py", line 8, in <module>
+    load_entry_point('setuptools==0.6c11', 'console_scripts', 'easy_install')()
+  File "C:\Python27\lib\site-packages\setuptools-0.6c11-py2.7.egg\setuptools\command\easy_install.py", line 1712, in main
+  File "C:\Python27\lib\site-packages\setuptools-0.6c11-py2.7.egg\setuptools\command\easy_install.py", line 1700, in with_ei_usage
+  File "C:\Python27\lib\site-packages\setuptools-0.6c11-py2.7.egg\setuptools\command\easy_install.py", line 1716, in <lambda>
+  File "C:\Python27\Lib\distutils\core.py", line 151, in setup
+    dist.run_commands()
+  File "C:\Python27\Lib\distutils\dist.py", line 953, in run_commands
+    self.run_command(cmd)
+  File "C:\Python27\Lib\distutils\dist.py", line 972, in run_command
+    cmd_obj.run()
+  File "C:\Python27\lib\site-packages\setuptools-0.6c11-py2.7.egg\setuptools\command\easy_install.py", line 211, in run
+  File "C:\Python27\lib\site-packages\setuptools-0.6c11-py2.7.egg\setuptools\command\easy_install.py", line 434, in easy_install
+  File "C:\Python27\lib\site-packages\setuptools-0.6c11-py2.7.egg\setuptools\package_index.py", line 475, in fetch_distribution
+AttributeError: 'NoneType' object has no attribute 'clone'
+
