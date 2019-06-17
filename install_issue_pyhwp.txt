@@ -179,3 +179,273 @@ Traceback (most recent call last):
   File "C:\Python27\lib\site-packages\setuptools-0.6c11-py2.7.egg\setuptools\package_index.py", line 475, in fetch_distribution
 AttributeError: 'NoneType' object has no attribute 'clone'
 
+
+#2.7.9ÀÌ»ó ¹öÀüºÎÅÍ´Â pip°¡ ¼³Ä¡µÇ¾î¼­ ³ª¿Â´Ù°í ÇÏ¿© ±×³É ¹öÀüÀ» 2.7.8 -> 2.7.10À¸·Î ¿Ã¸²
+C:\Python27\Scripts>easy_install pip
+Searching for pip
+Best match: pip 7.0.1
+Adding pip 7.0.1 to easy-install.pth file
+Installing pip-script.py script to C:\Python27\Scripts
+Installing pip.exe script to C:\Python27\Scripts
+Installing pip3.4-script.py script to C:\Python27\Scripts
+Installing pip3.4.exe script to C:\Python27\Scripts
+Installing pip3-script.py script to C:\Python27\Scripts
+Installing pip3.exe script to C:\Python27\Scripts
+
+Using c:\python27\lib\site-packages
+Processing dependencies for pip
+Finished processing dependencies for pip
+
+
+#pip ¾÷±×·¹ÀÌµå(ÇÊ¿äÇÏ´Ù ¶ß±æ·¡ ÇÔ)°¡ ¾ÈµÊ
+C:\Python27\Scripts>pip install --upgrade pip
+You are using pip version 7.0.1, however version 19.1.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/5c/e0/be401c003291b56efc55aeba6a80ab790d3d4cece2778288d65323009420/pip-19.1.1-py2.py3-none-any.whl (1.4MB)
+    100% |################################| 1.4MB 325kB/s
+Installing collected packages: pip
+  Found existing installation: pip 7.0.1
+    Uninstalling pip-7.0.1:
+      Successfully uninstalled pip-7.0.1
+Exception:
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\pip\basecommand.py", line 223, in main
+  File "C:\Python27\lib\site-packages\pip\commands\install.py", line 297, in run
+  File "C:\Python27\lib\site-packages\pip\req\req_set.py", line 633, in install
+  File "C:\Python27\lib\site-packages\pip\req\req_install.py", line 734, in commit_uninstall
+  File "C:\Python27\lib\site-packages\pip\req\req_uninstall.py", line 153, in commit
+  File "C:\Python27\lib\site-packages\pip\_vendor\retrying.py", line 49, in wrapped_f
+    return Retrying(*dargs, **dkw).call(f, *args, **kw)
+  File "C:\Python27\lib\site-packages\pip\_vendor\retrying.py", line 212, in call
+    raise attempt.get()
+  File "C:\Python27\lib\site-packages\pip\_vendor\retrying.py", line 247, in get
+    six.reraise(self.value[0], self.value[1], self.value[2])
+  File "C:\Python27\lib\site-packages\pip\_vendor\retrying.py", line 200, in call
+    attempt = Attempt(fn(*args, **kwargs), attempt_number, False)
+  File "C:\Python27\lib\site-packages\pip\utils\__init__.py", line 89, in rmtree
+  File "C:\Python27\lib\shutil.py", line 247, in rmtree
+    rmtree(fullname, ignore_errors, onerror)
+  File "C:\Python27\lib\shutil.py", line 247, in rmtree
+    rmtree(fullname, ignore_errors, onerror)
+  File "C:\Python27\lib\shutil.py", line 252, in rmtree
+    onerror(os.remove, fullname, sys.exc_info())
+  File "C:\Python27\lib\site-packages\pip\utils\__init__.py", line 101, in rmtree_errorhandler
+WindowsError: [Error 5] : 'c:\\users\\isang\\appdata\\local\\temp\\pip-os9k3j-uninstall\\python27\\scripts\\pip.exe'
+
+
+C:\Python27\Scripts>pip --version
+pip 19.1.1 from C:\Python27\lib\site-packages\pip (python 2.7)
+
+C:\Python27\Scripts>pip list
+DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+Package    Version
+---------- -------
+pip        19.1.1
+setuptools 16.0
+
+C:\Python27\Scripts>pip install --upgrade pyhwp
+DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+Collecting pyhwp
+  Using cached https://files.pythonhosted.org/packages/d3/6d/ff411aa690d6841c36c6576277b745d61765c4e4cca7a1ec06f915926d9e/pyhwp-0.1b12.tar.gz
+    ERROR: Complete output from command python setup.py egg_info:
+    ERROR: C:\Python27\lib\distutils\dist.py:267: UserWarning: Unknown distribution option: 'python_requires'
+      warnings.warn(msg)
+    warning: no previously-included files matching '*' found under directory 'docs\_build'
+    warning: no previously-included files matching '*.pyc' found under directory 'tests'
+    warning: no previously-included files matching '*.pyo' found under directory 'tests'
+
+    Installed c:\users\isang\appdata\local\temp\pip-install-j6pfi_\pyhwp\.eggs\babel-2.7.0-py2.7.egg
+    Searching for pytz>=2015.7
+    Reading https://pypi.python.org/simple/pytz/
+    Best match: pytz 2019.1
+    Downloading https://files.pythonhosted.org/packages/df/d5/3e3ff673e8f3096921b3f1b79ce04b832e0100b4741573154b72b756a681/pytz-2019.1.tar.gz#sha256=d747dd3d23d77ef44c6a3526e274af6efeb0a6f1afd5a69ba4d5be4098c8e141
+    Processing pytz-2019.1.tar.gz
+    Writing c:\users\isang\appdata\local\temp\easy_install-aw6yok\pytz-2019.1\setup.cfg
+    Running pytz-2019.1\setup.py -q bdist_egg --dist-dir c:\users\isang\appdata\local\temp\easy_install-aw6yok\pytz-2019.1\egg-dist-tmp-wxhoqp
+    Moving pytz-2019.1-py2.7.egg to c:\users\isang\appdata\local\temp\pip-install-j6pfi_\pyhwp\.eggs
+
+    Installed c:\users\isang\appdata\local\temp\pip-install-j6pfi_\pyhwp\.eggs\pytz-2019.1-py2.7.egg
+    error in pyhwp setup command: 'install_requires' must be a string or list of strings containing valid project/version requirement specifiers; Expected version spec in cryptography ; platform_python_implementation != "Jython" at  ; platform_python_implementation != "Jython"
+    ----------------------------------------
+ERROR: Command "python setup.py egg_info" failed with error code 1 in c:\users\isang\appdata\local\temp\pip-install-j6pfi_\pyhwp\
+
+C:\Python27\Scripts>pip list
+DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+Package    Version
+---------- -------
+pip        19.1.1
+setuptools 16.0
+
+#pyhwp¼³Ä¡¸¦ À§ÇØ lxml ¼³Ä¡
+C:\Python27\Scripts>pip install lxml
+DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+Collecting lxml
+  Downloading https://files.pythonhosted.org/packages/83/44/9b44dbbfcce44a7e627284edac25dc7172394c8ec34e7175aa7b76e7e057/lxml-4.3.3-cp27-cp27m-win_amd64.whl (3.6MB)
+     |################################| 3.6MB 3.5MB/s
+Installing collected packages: lxml
+Successfully installed lxml-4.3.3
+
+#pyhwp ¼³Ä¡°¡ ¿Ö¾ÈµÉ±î
+C:\Python27\Scripts>pip install pyhwp
+DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+Collecting pyhwp
+  Using cached https://files.pythonhosted.org/packages/d3/6d/ff411aa690d6841c36c6576277b745d61765c4e4cca7a1ec06f915926d9e/pyhwp-0.1b12.tar.gz
+    ERROR: Complete output from command python setup.py egg_info:
+    ERROR: C:\Python27\lib\distutils\dist.py:267: UserWarning: Unknown distribution option: 'python_requires'
+      warnings.warn(msg)
+    warning: no previously-included files matching '*' found under directory 'docs\_build'
+    warning: no previously-included files matching '*.pyc' found under directory 'tests'
+    warning: no previously-included files matching '*.pyo' found under directory 'tests'
+
+    Installed c:\users\isang\appdata\local\temp\pip-install-bau68p\pyhwp\.eggs\babel-2.7.0-py2.7.egg
+    Searching for pytz>=2015.7
+    Reading https://pypi.python.org/simple/pytz/
+    Best match: pytz 2019.1
+    Downloading https://files.pythonhosted.org/packages/df/d5/3e3ff673e8f3096921b3f1b79ce04b832e0100b4741573154b72b756a681/pytz-2019.1.tar.gz#sha256=d747dd3d23d77ef44c6a3526e274af6efeb0a6f1afd5a69ba4d5be4098c8e141
+    Processing pytz-2019.1.tar.gz
+    Writing c:\users\isang\appdata\local\temp\easy_install-udooxt\pytz-2019.1\setup.cfg
+    Running pytz-2019.1\setup.py -q bdist_egg --dist-dir c:\users\isang\appdata\local\temp\easy_install-udooxt\pytz-2019.1\egg-dist-tmp-q1vtlt
+    Moving pytz-2019.1-py2.7.egg to c:\users\isang\appdata\local\temp\pip-install-bau68p\pyhwp\.eggs
+
+    Installed c:\users\isang\appdata\local\temp\pip-install-bau68p\pyhwp\.eggs\pytz-2019.1-py2.7.egg
+    error in pyhwp setup command: 'install_requires' must be a string or list of strings containing valid project/version requirement specifiers; Expected version spec in cryptography ; platform_python_implementation != "Jython" at  ; platform_python_implementation != "Jython"
+    ----------------------------------------
+ERROR: Command "python setup.py egg_info" failed with error code 1 in c:\users\isang\appdata\local\temp\pip-install-bau68p\pyhwp\
+
+#pip¹öÀüÀ» ¾÷±×·¹ÀÌµåÇÑ ÀÌÈÄ¿¡ Àß µÊ (Anaconda¸¦ »ç¿ëÇØ¼­ ÇÏ´Ï±î ¾Õ¿¡ (base)¶ó°í ³ª¿È)
+(base) PS>pip2 install --upgrade setuptools
+DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+Collecting setuptools
+  Downloading https://files.pythonhosted.org/packages/ec/51/f45cea425fd5cb0b0380f5b0f048ebc1da5b417e48d304838c02d6288a1e/setuptools-41.0.1-py2.py3-none-any.whl (575kB)
+     |################################| 583kB 263kB/s
+Installing collected packages: setuptools
+  Found existing installation: setuptools 16.0
+    Uninstalling setuptools-16.0:
+      Successfully uninstalled setuptools-16.0
+Successfully installed setuptools-41.0.1
+(base) PS>pip2 --version
+pip 19.1.1 from C:\Python27\lib\site-packages\pip (python 2.7)
+(base) PS>pip --version
+pip 19.0.3 from C:\Users\isang\Anaconda3\lib\site-packages\pip (python 3.7)
+
+(base) PS>pip2 install pyhwp
+DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+Collecting pyhwp
+  Using cached https://files.pythonhosted.org/packages/d3/6d/ff411aa690d6841c36c6576277b745d61765c4e4cca7a1ec06f915926d9e/pyhwp-0.1b12.tar.gz
+Collecting docopt>=0.6 (from pyhwp)
+  Downloading https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz
+Collecting cryptography (from pyhwp)
+  Downloading https://files.pythonhosted.org/packages/d8/30/6313af106e5abff8bfa78eb2ce630673bb5add4fafd3b28d4bd0271c8e7f/cryptography-2.7-cp27-cp27m-win_amd64.whl (1.5MB)
+     |################################| 1.5MB 398kB/s
+Requirement already satisfied: lxml in c:\python27\lib\site-packages (from pyhwp) (4.3.3)
+Collecting olefile>=0.43 (from pyhwp)
+  Downloading https://files.pythonhosted.org/packages/34/81/e1ac43c6b45b4c5f8d9352396a14144bba52c8fec72a80f425f6a4d653ad/olefile-0.46.zip (112kB)
+     |################################| 112kB 2.1MB/s
+Collecting enum34; python_version < "3" (from cryptography->pyhwp)
+  Downloading https://files.pythonhosted.org/packages/c5/db/e56e6b4bbac7c4a06de1c50de6fe1ef3810018ae11732a50f15f62c7d050/enum34-1.1.6-py2-none-any.whl
+Collecting cffi!=1.11.3,>=1.8 (from cryptography->pyhwp)
+  Downloading https://files.pythonhosted.org/packages/fa/24/37ec704b98ffc36e7d0ade9e4653539c0b8e6fec34f084f30194609aa10b/cffi-1.12.3-cp27-cp27m-win_amd64.whl (168kB)
+     |################################| 174kB 2.1MB/s
+Collecting six>=1.4.1 (from cryptography->pyhwp)
+  Downloading https://files.pythonhosted.org/packages/73/fb/00a976f728d0d1fecfe898238ce23f502a721c0ac0ecfedb80e0d88c64e9/six-1.12.0-py2.py3-none-any.whl
+Collecting asn1crypto>=0.21.0 (from cryptography->pyhwp)
+  Downloading https://files.pythonhosted.org/packages/ea/cd/35485615f45f30a510576f1a56d1e0a7ad7bd8ab5ed7cdc600ef7cd06222/asn1crypto-0.24.0-py2.py3-none-any.whl (101kB)
+     |################################| 102kB 1.7MB/s
+Collecting ipaddress; python_version < "3" (from cryptography->pyhwp)
+  Downloading https://files.pythonhosted.org/packages/fc/d0/7fc3a811e011d4b388be48a0e381db8d990042df54aa4ef4599a31d39853/ipaddress-1.0.22-py2.py3-none-any.whl
+Collecting pycparser (from cffi!=1.11.3,>=1.8->cryptography->pyhwp)
+  Downloading https://files.pythonhosted.org/packages/68/9e/49196946aee219aead1290e00d1e7fdeab8567783e83e1b9ab5585e6206a/pycparser-2.19.tar.gz (158kB)
+     |################################| 163kB 2.1MB/s
+Installing collected packages: docopt, enum34, pycparser, cffi, six, asn1crypto, ipaddress, cryptography, olefile, pyhwp
+  Running setup.py install for docopt ... done
+  Running setup.py install for pycparser ... done
+  Running setup.py install for olefile ... done
+  Running setup.py install for pyhwp ... done
+Successfully installed asn1crypto-0.24.0 cffi-1.12.3 cryptography-2.7 docopt-0.6.2 enum34-1.1.6 ipaddress-1.0.22 olefile-0.46 pycparser-2.19 pyhwp-0.1b12 six-1.12.0
+
+#ÆÄÀÌ½ã3¿¡¼­´Â ÀÌ·¸°Ô ÇØ¾ß pip°¡ ¾÷±×·¹ÀÌµå µÊ
+(base) PS>py -m pip install --upgrade pip
+Collecting pip
+  Using cached https://files.pythonhosted.org/packages/5c/e0/be401c003291b56efc55aeba6a80ab790d3d4cece2778288d65323009420/pip-19.1.1-py2.py3-none-any.whl
+Installing collected packages: pip
+  Found existing installation: pip 19.0.3
+    Uninstalling pip-19.0.3:
+      Successfully uninstalled pip-19.0.3
+Successfully installed pip-19.1.1
+
+#pyhwp ¼³Ä¡°¡ ¿Ï·áµÇ¸é C:\Python27\Scripts¿¡ ½ÇÇàÆÄÀÏµé°ú ½ºÅ©¸³Æ®µéÀÌ µé¾î¼­°Ô µÊ
+
+#ÀÌÁ¦ pyhwp ±¸µ¿ÇØº¸¸éµÊ
+
+#pyhwp¸¦ ¾î¶»°Ô ±¸µ¿ÇØ¾ßÇÏ´ÂÁö ¸ð¸£°Ú´Ù
+
+#ÄÚµå¸¦ Á÷Á¢ Â¥¼­ ÇØº¸ÀÚ python °øºÎ°¡ ÇÊ¿äÇÏ´Ù / hwp5txt-script.py¿¡ ³ª¿À´Â ÄÚµåµµ Á¦´ë·Î ÀÌÇØ¸¦ ¸øÇÏ°Ú´Ù.
+
+#IOError: [Errno 0] Error°¡ ¶á´Ù. ÆÄÀÌ½ã °øºÎÇÏÀÚ
+C:\Users\isang\Desktop>hwp5txt "µ¿¿¬.hwp"
+?™ì—°
+
+?Œë¬»?€ ?´ë™?”ëŠ” ?Šìž„?†ì´ ?¶ì„ ë°Ÿì•„?˜ê?ê³??ˆë‹¤
+
+20171001
+ë°?ë¬??´ë©´ ë³´ì´??
+?¡ì? ì¹¨ë??€ ?¬ë–¨??
+?‘ì? ê³µê°„ ê°€??ì±„ìš´
+?ìš±???´ë°°?°ê¸°
+ì¡°ê·¸ë§ˆí•œ ? ë¦¬ì°?ê±´ë„ˆ
+êµµì? ?„ì‹ ì£??”ë?
+
+ê¹Šì? ê¸°ì¹¨???˜ë©°
+ê°€?˜ë“??ëª©ì†Œë¦¬ë¡œ
+?„ì´ë¥?ë°˜ê²¨ì£¼ëŠ” ?¹ì‹ 
+?ê°œ?¥ì„ ë§Œë“¤??
+?˜ì˜ ?´ë¨¸?ˆë? ?„í•´
+?¹ì‹ ???ìžë¥??„í•´
+êµ³ì–´ë²„ë¦° ê·?ë¹›ë‚˜????
+
+ê·??ì? ?‘ì? ?ì—ê²?
+ê³¼ìž ?˜ë‚˜ë¥?ì¥ì–´ì£¼ë©°
+?ì‹ ??ì§€?œë? ?„í•´ì¤€??
+?˜ì?ë§??„ì´??ê°ê°?€
+???ˆì˜ ?¬ì½¤?¨ì— ì·¨í•´
+ë°”ëžŒ?Œë¦¬ë§??¤ë¦´ ë¿??´ë‹¤
+
+ê·??œê°„??ë°˜ì¶”?˜ë©°
+?´ë°°ë¥?ê³±ì”¹???˜ëŠ”
+?´ëŠ???˜ì´ë¥?ë¨¹ì–´
+?¹ì‹ ??ê·¸ë¦¬?Œí•˜ë©?
+ê³¼ê±°ë¥??„íšŒ?˜ë©°
+???„ì´???ì—
+?‘ì? ?¬íƒ•??ì¥ì–´ì¤€??
+
+20170522
+ì¹œêµ¬?? ?°ë¦¬ê°€ ?¨ê»˜ ?ˆë˜ ê¸??œê°„???˜ëŠ” ê·¸ì? ?¹ì—°?˜ë‹¤ê³ ë§Œ ?ê°?ˆë‹¤. ê·¸ë ‡ê²?1?? 2???´ëŠ??10?„ì„ ?˜ì? ?¸ì›”??ì§€?˜ëŠ” ?™ì•ˆ ?˜ëŠ” ?ˆë? ?Šê³  ì§€???ë„ ë§Žì•˜ê³? ?¤ëžœ ?œê°„ ?™ì•ˆ ??ë³´ê³  ì§€?ˆë˜ ?ë„ ë§Žì•˜?? ?„ì§??ë¨¸ë¦¬ ?ì—” ì´ˆë“±?™êµ êµì‹¤?ì„œ ê°™ì´ ?€??ëª¨ìŠµ??? í•˜ê³? ê³ ë“±?™êµ?ì„œ ?¥ë‚œ??ì¹˜ë©° ?ƒë˜ ëª¨ìŠµ??? í•œ???´ëŠ???ˆëŠ” êµ°ë???ê°€??êµ¬ë‚˜. ??ƒ ?ƒê¸°ë§??˜ëŠ” ?ˆì—ê²??˜ëŠ” ???´ì•¼ê¸°ë§Œ ?˜ê³ , ?€ë¦¬ê¸°ë§??ˆì?. ?ˆëŠ” ?˜ì—ê²??˜ë„ ?†ëŠ” ë²—ì´ ?˜ì–´ ì£¼ì—ˆ?”ë°, ?˜ëŠ” ?ˆì—ê²??˜ìœ ì§“ë§Œ ê³¨ë¼?ˆë‹¤. ?´ì œ ê²¨ìš° 22?´ì¸?? ???´ë????°ë½ì²˜ë? ë³´ë©´ ì¹œí–ˆ???•ë“¤?€ ?œë??˜ê³  ë°”ë¹ ì§€ê³? ì¹œêµ¬?¤ì? ?¤ë“¤ ë©€ë¦??¨ì–´??ê°‘ìžê¸??°ë½?˜ê¸°???˜ë“  ?¬ì´ê°€ ?˜ì—ˆ?”ë°, ???˜ë‚˜ë§?ê·¸ë?ë¡??¨ì•„?ˆë‹¤. ëª??„ì´ ì§€?˜ë„ ê·¸ë?ë¡œì¼ ê²?ê°™ë‹¤. ? ë‹¬ë¦?êµµê²Œ ë³´ì´???¡ì • ???´ë¦„???„í™”ë¥?ëª»í•˜ê³??´ë ‡ê²?ì°Œì§ˆ?˜ê²Œ ê¸€???¨ê¸´?? ?´ëŸ° ê²ƒë“¤?????´ì œ???Œì•˜?”ì?, ???ì‹ ???ë§?¤ëŸ½ê¸°ë§Œ ?˜ë ‹¤.
+
+ì¹œêµ¬?? ??ƒ ?ˆëŠ” ?˜í•œ??ë­”ê? ?™ê²½??ì¡´ìž¬?€?? ??ƒ êµ³ì„¸ê³??•ì˜ë¡?³  ?„ë•?ì¸ ?ˆì˜ ëª¨ìŠµ??ë³´ë©´ ?˜ë‚˜???€?‡ê²Œ ?¼ì•¼ì§€???¼ê³  ?ê°?ˆê³  ?ˆê? ?˜ì˜ ì¹œêµ¬?¼ëŠ” ê²ƒì´ ?ˆë¬´?˜ë„ ?ëž‘?¤ëŸ½?¤ê³  ?ê°?ˆë‹¤. ?žìœ¼ë¡œë„ ê·??ê°?€ ë³€?˜ì? ?Šì„ ê±?ê°™ì•„. ì§€ê¸ˆê¹Œì§€ ??ƒ ê³ ë§ˆ? ê³  ?ˆì—ê²??•ë§ ë§Žì? ê²ƒì„ ë°°ì› ?? ?žìœ¼ë¡œë„ ??ì¢€ ë§Žì´ ê°€ë¥´ì³ì¤˜ë¼ ì¹œêµ¬??
+
+   ì¹œêµ¬?? ?´ê? ??ƒ ?ˆí•œ?????µì˜ ê°€???´ê³  ?¶ë‹¤ê³? ????? ì•„ë²„ë‹˜ ê³„ì‹  ê³??†ì— ?´ê³  ?¶ë‹¤ ?˜ì? ?Šì•˜?? ??ë°”ë‹¤ ?ˆë¨¸ ë³´ì´???˜í‰? ì´ ?ˆë¬´??ì¢‹ë”?? ??ëª?ê°œë§Œ ì§€?°ë©´ êµ¬ë¶„ ???˜ëŠ” ê·??œìˆ˜??ê²½ê³„? ì´ ?ˆë¬´??ì¢‹ë”?? ê±°ê¸°??ê±¸ì³?ˆëŠ” ë¶‰ì? ?¬ê³¼ ?˜ëŠ˜???¬ë??˜ê²Œ ? ìžˆ???˜ì? ì¡°ì•½?Œì´ ?ˆë¬´???ˆì˜?”ë¼. ê·?ê°ìƒ?€ ?˜ë§Œ??ê²??´ê¸¸ ë°”ëž¬?”ë°, ?´ì œ????ì¹œêµ¬???ˆì? ?¨ê»˜ ë³´ê³  ?¶ë‹¤.
+
+
+?µìž¥
+
+ë¯¸ì•ˆ?˜ë‹¤ ??ê³ ë§™??ì¹œêµ¬??
+ëª¨ìž?€ ê¸€??ì¹˜ìž¥?˜ë‹¤ë³´ë‹ˆ ?µìž¥????—ˆ??
+
+?´ê? ?ì·¨????ì´ˆì—¬ë¦??ˆë²½??ë§‰ì°¨?Šê¸´ ?œìš¸?€?…êµ¬??—???ê°?ˆì—ˆ?? ?ˆê²½??ë²—ê³  ë°”ë¼ë³??¸ìƒ?€ ?„ì??‘ì´ê°€ ?¼ì–´?¬ê³ , 3ë²ˆì¶œêµ??¤íŽ¸ ?ì‹œ?¹ê°•?¥ì—???ì‹œë¥?ê¸°ë‹¤ë¦¬ê³  ?ˆì—ˆì§€. ?´ë½???Œë¦¬???€???ì‹œë¥?ê¸‰í•˜ê²???ê² ƒì´ ê¸°ì–µ?œë‹¤. ?„ë§ˆ ?°ë¦¬???¶ë„ ê·¸ëž˜?”ê² ì§€. ë°”ë‹¥???¨ì–´ì§??„ë‹¨ì§€ë¥?ë°Ÿì•„ ?˜ì²­?´ë©´?œë„ ?€?¼í•  ?ì‹œë¥??¥í•´ ë°œì„ ?´ë”›???”ê² ì§€. ?°ë¦¬??ëª??˜ì¼ê³³ì„ ?¥í•˜???¹ê°?¼ë¡œ ?´ì•„?¤ì? ?Šì•˜?„ê¹Œ ?¶ë‹¤. ë¯¸ë„?¬ì?ê³??˜ì²­ê±°ë ¤???´ìƒê³?ëª©í‘œë¥?ì¢‡ì•„ ?”ë“¯??ë§ì´??
+
+ê³ ë“±?™êµ 2?™ë…„???ˆê? ??ê¸€??ë³´ê³  ?¶ì„ ?´ë–»ê²??´ì•„???˜ëŠ”ê°€ ?ê°?˜ê³  ë°˜ì„±?ˆë˜ê²??ê°?œë‹¤. ê·??Œì˜ ?˜ëŠ” ???•ë¶„???±ìž¥?????ˆì—ˆê³? ?¬ìˆ˜? ë•Œ ?´ì£¼?ˆë˜ ?˜ë§Ž?€ ì¡°ì–¸?¤ì—­?????¶ì—?œëŠ” ì§€?????†ëŠ” ë²„í?ëª©ì—­? ì„ ??ì£¼ì—ˆ?? ?•ë§ ê³ ë§™ê³???ê³ ë§™?? ?ˆê? ?†ì—ˆ?¤ë©´ ?˜ë“  ?œê°„?¤ì— ??ë¬´ë„ˆì§€ì§€ ?Šì•˜?„ê¹Œ ?¶ì–´. ?¤ì‹œ ??ê³ ë§™??
+
+?˜ëTraceback (most recent call last):
+  File "C:\Python27\Scripts\hwp5txt-script.py", line 11, in <module>
+    load_entry_point('pyhwp==0.1b12', 'console_scripts', 'hwp5txt')()
+  File "C:\Python27\lib\site-packages\hwp5\hwp5txt.py", line 104, in main
+    transform(hwp5file, dest)
+  File "C:\Python27\lib\site-packages\hwp5\transforms\__init__.py", line 50, in transform_hwp5
+    return transform_xhwp5(xhwp5path, output)
+  File "C:\Python27\lib\site-packages\hwp5\plat\_lxml.py", line 95, in transform_into_stream
+    return self._transform(inp_file, output)
+  File "C:\Python27\lib\site-packages\hwp5\plat\_lxml.py", line 109, in _transform
+    output.write(result)
+IOError: [Errno 0] Error
+ 
